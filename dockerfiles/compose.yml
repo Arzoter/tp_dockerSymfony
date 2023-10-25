@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:8.1
+    restart: always
+    container_name: php.localhost
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    volumes:
+      - ./home/arthur_ubuntu/exercices/tp-dockerSymfony:/app
+    ports:
+      - 8000:8000
+    command: ["php", "-S", "0.0.0.0:80", "-t", "/app/symfony_app/public"]
+
+    
+
+  composer:
+    image: composer:lts
+    restart: always
+    container_name: composer.localhost
+    build:
+      context: .
+      dockerfile: Dockerfile.composer
+    volumes:
+      - ./home/arthur_ubuntu/exercices/tp-dockerSymfony:/app
+
+  # phpMyAdmin:
+  #   image: phpmyadmin:apache
+  #   restart: always
+  #   container_name: myAdmin.localhost
