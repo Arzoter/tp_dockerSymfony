@@ -1,0 +1,5 @@
+FROM mysql:8.2.0 as default
+
+# Définir les règles de sécurité mdp pour MySQL
+ENV MYSQL_ROOT_PASSWORD=rootpswrd
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes

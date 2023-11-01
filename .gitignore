@@ -1,0 +1,24 @@
+# Ignorer les fichiers générés par Composer
+/symfony_app/vendor
+
+# Ignorer les fichiers de logs
+/symfony_app/var/log/
+/symfony_app/var/cache/
+
+# Ignorer le répertoire des sessions
+/symfony_app/var/sessions/
+
+# Ignorer les fichiers de configurations personnalisées (par exemple, parameters.yml)
+/symfony_app/config/parameters.yml
+/symfony_app/config/parameters.yml.dist
+
+# Ignorer les fichiers de configurations d'environnement (peut contenir des informations sensibles)
+/symfony_app/.env
+/symfony_app/.env.local
+
+# Ignorer les fichiers de sauvegarde
+*.bak
+*.swp
+
+# Ignorer les fichiers d'éditeurs (à adapter en fonction de votre éditeur)
+.vscode/
